@@ -31,3 +31,4 @@ rental_data['Flag']=np.where(rental_data['Month Divider']<rental_data['Today'],'
 
 
 output2=pd.pivot_table(rental_data,index='Year',columns='Flag',values='Rent per Month',aggfunc='sum').reset_index().rename_axis(None,axis='columns').drop('Lesser',axis=1)
+
